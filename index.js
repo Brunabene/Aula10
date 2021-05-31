@@ -3,6 +3,8 @@ var app = express();
 app.use(express.json());
 let banco_dados =[];
 
+app.listen(process.env.PORT || 3000);
+
 app.get('/', function(req, res) {
     res.send('Olá Mundo!');
   });
@@ -41,13 +43,4 @@ app.delete('/deletar/:id',
 );
 
 
-app.listen(3000, function() {
-  console.log('App de Exemplo escutando na porta 3000!');
-});
-
-
-
-app.listen(3000, function() {
-  console.log('App de Exemplo escutando na porta 3000!');
-});
 
