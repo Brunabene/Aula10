@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 app.use(express.json());
-const banco_dados =[];
+let banco_dados =[];
 
 app.get('/', function(req, res) {
     res.send('Olá Mundo!');
@@ -26,8 +26,8 @@ res.send(`Livros: ${nome} e ${autor}`);
   app.put('/atualizar/:id',
   (req, res) => {
       const id = req.params.id - 1;
-      const banco_dados = req.body.banco_dados;
-      banco_dados[id] = banco_dados;        
+      const banco_dados_atualizado = req.body.banco_dados;
+      banco_dados[id] = banco_dados_atualizado;        
       res.send("Livro atualizado com sucesso.")
   }
 )
@@ -39,6 +39,12 @@ app.delete('/deletar/:id',
       res.send("Livro removido com sucesso");
   }
 );
+
+
+app.listen(3000, function() {
+  console.log('App de Exemplo escutando na porta 3000!');
+});
+
 
 
 app.listen(3000, function() {
