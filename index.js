@@ -8,9 +8,7 @@ app.listen(process.env.PORT || 3000);
 app.get('/', function(req, res) {
     res.send('Olá Mundo!');
   });
-  app.get('/ola', function(req, res) {
-    res.send('Olá Mundobruna!');
-  });
+ 
 
 app.get('/listar', function(req, res) {
     console.log(banco_dados);
