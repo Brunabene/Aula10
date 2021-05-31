@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Brunabene/Aula10/issues"
   },
-  "homepage": "https://github.com/Brunabene/Aula10#readme"
+  "homepage": "https://github.com/Brunabene/Aula10#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0"
+  }
 }
