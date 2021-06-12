@@ -2,8 +2,8 @@ var express = require('express');
 var app = express();
 app.use(express.json());
 
-var cors = require('cors');
-app.use(cors());
+//var cors = require('cors');
+//app.use(cors());
 let banco_dados =[];
 
 app.listen(process.env.PORT || 3000);
