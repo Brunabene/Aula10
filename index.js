@@ -50,7 +50,9 @@ app.delete('/deletar/:id',
 */
 
 const mongodb = require('mongodb')
-const password = process.argv[2] || "asdf";
+const password = process.env.PASSWORD || "asdf";
+console.log(password);
+// const password = process.argv[2] || "asdf";
 
 // const connectionString = `mongodb+srv://admin:${password}@cluster0.fhdc2.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 const connectionString = `mongodb+srv://admin:${password}@cluster0.6tiob.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
