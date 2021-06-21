@@ -32,7 +32,7 @@ app.post('/adicionar', function (req, res) {
 app.put('/atualizar/:id',
   (req, res) => {
     const id = req.params.id - 1;
-    const banco_dados_atualizado = req.body;
+    const banco_dados_atualizado = req.body.banco_dados;
     banco_dados[id] = banco_dados_atualizado;
     res.send("Livro atualizado com sucesso.")
   }
