@@ -132,7 +132,7 @@ app.delete('/database/:id',
 
     await livros.deleteOne({ _id: mongodb.ObjectID(id) });
 
-    res.send("Livro removida com sucesso");
+    res.send("Livro removido com sucesso");
   }
 );
 
